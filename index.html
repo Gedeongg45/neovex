@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neovex Hosting - Servidores Premium Gaming | Miami, Canadá, Brasil</title>
+    <meta name="description" content="Hosting premium para Minecraft, Hytale, ARK y más. Ryzen 9 9950X, NVMe, Anti-DDoS 10Tb/s. Desde $2.99/mes.">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/images/logo-mobile.png">
+    
+    <!-- CSS Professional -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/glass.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting" class="logo-main">
+                        <img src="img/ui/logo-mobile.png" alt="Neovex Hosting" class="logo-mobile">
+                    </a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="#inicio" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#planes" class="nav-link" data-i18n="nav.plans">Planes</a>
+                            <div class="dropdown-menu">
+                                <a href="minecraft.html">Minecraft</a>
+                                <a href="hytale.html">Hytale</a>
+                                <a href="#ark">ARK</a>
+                                <a href="#fivem">FiveM</a>
+                                <a href="#rust">Rust</a>
+                                <a href="#vps">VPS</a>
+                            </div>
+                        </li>
+                        <li><a href="#ubicaciones" class="nav-link" data-i18n="nav.locations">Ubicaciones</a></li>
+                        <li class="dropdown">
+                            <a href="#herramientas" class="nav-link" data-i18n="nav.tools">Herramientas</a>
+                            <div class="dropdown-menu">
+                                <a href="#calculadora" data-i18n="footer.calculator">Calculadora</a>
+                                <a href="#ping" data-i18n="footer.pingTest">Test de Ping</a>
+                                <a href="#speedtest" data-i18n="footer.speedtest">Speedtest</a>
+                            </div>
+                        </li>
+                        <li><a href="#soporte" class="nav-link" data-i18n="nav.support">Soporte</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <button class="lang-btn" id="langBtn">
+                                <span>🌐</span>
+                                <span id="currentLang">ES</span>
+                            </button>
+                            <div class="lang-dropdown" id="langDropdown">
+                                <a href="/" data-lang="es">Español</a>
+                                <a href="/en" data-lang="en">English</a>
+                                <a href="/fr" data-lang="fr">Français</a>
+                            </div>
+                        </div>
+                        <a href="#panel" class="btn-secondary" data-i18n="nav.panel">Panel</a>
+                        <a href="#comprar" class="btn-primary" data-i18n="nav.buyNow">Comprar Ahora</a>
+                    </div>
+                </div>
+
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero hero-enhanced" id="inicio">
+    <!-- NUEVO: Agregar este div -->
+    <div class="hero-background">
+        <img src="img/backgrounds/minecraft-bg.jpg" 
+             alt="Minecraft Background" 
+             class="hero-background-image">
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero hero-enhanced" id="inicio"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="aurora-effect"></div>
+        <div class="hero-gradient"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                    <span data-i18n="hero.badge">Servidores Disponibles</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line" data-i18n="hero.title1">Hosting Premium</span>
+                    <span class="title-line gradient-text text-gradient-animated" data-i18n="hero.title2">Para Tu Comunidad</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    <span data-i18n="hero.subtitle">Potencia tus servidores con hardware de última generación.</span><br>
+                    <strong data-i18n="hero.specs">Ryzen 9 9950X · NVMe · Anti-DDoS 10Tb/s</strong>
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#planes" class="btn-hero-primary ripple magnetic">
+                        <span data-i18n="hero.viewPlans">Ver Planes</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#calculadora" class="btn-hero-secondary magnetic">
+                        <span data-i18n="hero.calculator">Calculadora</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value" data-count="99.9">0</span><span class="stat-value">%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="10">0</span><span class="stat-value">Tb/s</span>
+                        <span class="stat-label">Anti-DDoS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="24">0</span><span class="stat-value">/7</span>
+                        <span class="stat-label">Soporte</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="3">0</span><span class="stat-value">+</span>
+                        <span class="stat-label">Ubicaciones</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="server-card card-3d-ultra float-advanced shimmer-effect neon-purple">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <div class="status-indicator pulse"></div>
+                        <span>Servidor Activo</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="server-stat">
+                            <span class="label">CPU</span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 34%"></div>
+                            </div>
+                            <span class="value">34%</span>
+                        </div>
+                        <div class="server-stat">
+                            <span class="label">RAM</span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 67%"></div>
+                            </div>
+                            <span class="value">67%</span>
+                        </div>
+                        <div class="server-stat">
+                            <span class="label">DISCO</span>
+                            <div class="bar">
+                                <div class="bar-fill" style="width: 45%"></div>
+                            </div>
+                            <span class="value">45%</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="ping">
+                            <span class="ping-dot"></span>
+                            12ms
+                        </span>
+                        <span class="location">Miami, USA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games-section" id="juegos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Servidores de Juegos</h2>
+                <p class="section-subtitle">Optimizados para el máximo rendimiento</p>
+            </div>
+
+            <div class="games-grid" id="gamesGrid">
+                <!-- Generado dinámicamente por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section" id="planes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planes de Minecraft</h2>
+                <p class="section-subtitle">Escoge el plan perfecto para tu comunidad</p>
+            </div>
+
+            <div class="plans-selector">
+                <!-- Generado dinámicamente por JavaScript -->
+            </div>
+
+            <div class="plans-grid" id="plansGrid">
+                <!-- Generado dinámicamente por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué Neovex?</h2>
+                <p class="section-subtitle">Tecnología que marca la diferencia</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="url(#gradient1)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="gradient1">
+                                    <stop offset="0%" stop-color="#9F53FF"/>
+                                    <stop offset="100%" stop-color="#5F27FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Activación Instantánea</h3>
+                    <p>Tu servidor listo en menos de 60 segundos. Sin esperas, sin complicaciones.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="7" height="7" stroke="url(#gradient2)" stroke-width="2" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="url(#gradient2)" stroke-width="2" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="url(#gradient2)" stroke-width="2" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="url(#gradient2)" stroke-width="2" rx="1"/>
+                            <defs>
+                                <linearGradient id="gradient2">
+                                    <stop offset="0%" stop-color="#9F53FF"/>
+                                    <stop offset="100%" stop-color="#5F27FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Hardware Premium</h3>
+                    <p>AMD Ryzen 9 9950X y almacenamiento NVMe para máximo rendimiento.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="url(#gradient3)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="gradient3">
+                                    <stop offset="0%" stop-color="#9F53FF"/>
+                                    <stop offset="100%" stop-color="#5F27FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Anti-DDoS 10Tb/s</h3>
+                    <p>Protección Tunnel GRE de nivel empresarial. Tu servidor siempre protegido.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="url(#gradient4)" stroke-width="2"/>
+                            <path d="M12 6v6l4 2" stroke="url(#gradient4)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="gradient4">
+                                    <stop offset="0%" stop-color="#9F53FF"/>
+                                    <stop offset="100%" stop-color="#5F27FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Equipo técnico disponible las 24 horas. Respuestas rápidas cuando las necesitas.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="url(#gradient5)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="gradient5">
+                                    <stop offset="0%" stop-color="#9F53FF"/>
+                                    <stop offset="100%" stop-color="#5F27FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Panel Pterodactyl</h3>
+                    <p>Interfaz moderna e intuitiva. Control total sobre tu servidor.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <circle cx="9" cy="7" r="4" stroke="url(#gradient6)" stroke-width="2"/>
+                            <path d="M2 21v-4a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v4M18 13v6M21 16h-6" stroke="url(#gradient6)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="gradient6">
+                                    <stop offset="0%" stop-color="#9F53FF"/>
+                                    <stop offset="100%" stop-color="#5F27FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Backups Automáticos</h3>
+                    <p>Tus datos siempre seguros con copias de respaldo programadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section" id="ubicaciones">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ubicaciones Globales</h2>
+                <p class="section-subtitle">Servidores cerca de tu comunidad</p>
+            </div>
+
+            <div class="locations-map">
+                <div class="map-container">
+                    <img src="img/map/world-map.webp" alt="Mapa Mundial" class="world-map">
+                    
+                    <div class="location-marker" style="left: 24.5%; top: 50.8%;" data-location="miami">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">
+                            <strong>Miami</strong>
+                            <span>USA</span>
+                        </div>
+                    </div>
+
+                    <div class="location-marker" style="left: 20%; top: 28%;" data-location="canada">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">
+                            <strong>Canadá</strong>
+                            <span>Quebec</span>
+                        </div>
+                    </div>
+
+                    <div class="location-marker" style="left: 34%; top: 69%;" data-location="brasil">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">
+                            <strong>Brasil</strong>
+                            <span>São Paulo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="locations-grid">
+                    <div class="location-card active scroll-reveal" data-location="miami">
+                        <img src="assets/flags/us.svg" alt="USA" class="location-flag">
+                        <h3>Miami</h3>
+                        <p>Estados Unidos</p>
+                        <div class="location-ping">
+                            <span class="ping-value">12ms</span>
+                            <span class="ping-label" data-i18n="locations.avgLatency">Latencia promedio LATAM</span>
+                        </div>
+                        <a href="#" class="location-test" data-i18n="locations.testPing">Test de Ping</a>
+                    </div>
+
+                    <div class="location-card scroll-reveal" data-location="canada">
+                        <img src="assets/flags/canada.png" alt="Canada" class="location-flag">
+                        <h3>Canadá</h3>
+                        <p>Quebec</p>
+                        <div class="location-ping">
+                            <span class="ping-value">18ms</span>
+                            <span class="ping-label" data-i18n="locations.avgLatency">Latencia promedio LATAM</span>
+                        </div>
+                        <a href="#" class="location-test" data-i18n="locations.testPing">Test de Ping</a>
+                    </div>
+
+                    <div class="location-card upcoming scroll-reveal" data-location="brasil">
+                        <img src="assets/flags/brasil.png" alt="Brasil" class="location-flag">
+                        <h3>Brasil</h3>
+                        <p>São Paulo</p>
+                        <div class="location-ping">
+                            <span class="ping-value">Q2 2025</span>
+                            <span class="ping-label">Próximamente</span>
+                        </div>
+                        <a href="#" class="location-test disabled">Notificarme</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para empezar?</h2>
+                <p>Crea tu servidor en menos de 60 segundos</p>
+                <div class="cta-buttons">
+                    <a href="#planes" class="btn-cta-primary">Ver Planes</a>
+                    <a href="#calculadora" class="btn-cta-secondary">Calculadora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting">
+                    </div>
+                    <p>Hosting premium para gaming. Servidores optimizados con la mejor infraestructura de LATAM.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Juegos</h4>
+                    <ul>
+                        <li><a href="minecraft.html">Minecraft</a></li>
+                        <li><a href="hytale.html">Hytale</a></li>
+                        <li><a href="#ark">ARK</a></li>
+                        <li><a href="#fivem">FiveM</a></li>
+                        <li><a href="#rust">Rust</a></li>
+                        <li><a href="#vps">VPS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#calculadora">Calculadora</a></li>
+                        <li><a href="#ping">Test de Ping</a></li>
+                        <li><a href="#speedtest">Speedtest</a></li>
+                        <li><a href="#status">Estado</a></li>
+                        <li><a href="#docs">Documentación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#discord">Discord</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                        <li><a href="#migracion">Migración Gratis</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#terminos">Términos</a></li>
+                        <li><a href="#privacidad">Privacidad</a></li>
+                        <li><a href="#afiliados">Afiliados</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neovex Hosting. Todos los derechos reservados.</p>
+                <div class="footer-payments">
+                    <span>Aceptamos:</span>
+                    <div class="payment-icons">
+                        <img src="img/metodo de pago/visa.webp" alt="Visa">
+                        <img src="img/metodo de pagomastercard.webp" alt="Mastercard">
+                        <img src="img/metodo de pagopaypal.webp" alt="PayPal">
+                        <img src="img/metodo de pagoskrill.webp" alt="Skrill">
+                        <img src="img/metodo de pagoamerican-express.webp" alt="American Express">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/plansData.js"></script>
+</html>

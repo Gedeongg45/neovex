@@ -1,0 +1,147 @@
+/* ========================================
+   GLASS MORPHISM CARDS - MEJORAS SUAVES
+   Solo mejora visual sin romper estilos existentes
+   Agregar DESPUÉS del CSS principal
+   ======================================== */
+
+/* ===== PLAN CARDS - GLASS EFFECT (MEJORA) ===== */
+.plan-card {
+    background: rgba(31, 20, 50, 0.45) !important;
+    backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
+}
+
+/* Reflejo de luz superior (opcional - solo visual) */
+.plan-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3) 30%,
+        rgba(255, 255, 255, 0.3) 70%,
+        transparent
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===== HOVER MEJORADO ===== */
+.plan-card:hover {
+    background: rgba(41, 27, 65, 0.55) !important;
+    box-shadow: 
+        0 25px 70px rgba(0, 0, 0, 0.6),
+        0 0 100px rgba(159, 83, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ===== FEATURED CARD - MÁS DESTACADA ===== */
+.plan-card.featured {
+    background: rgba(45, 30, 70, 0.55) !important;
+    border-color: rgba(159, 83, 255, 0.6) !important;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(159, 83, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.plan-card.featured:hover {
+    background: rgba(50, 35, 75, 0.65) !important;
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.7),
+        0 0 120px rgba(159, 83, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ===== GAME CARDS - GLASS EFFECT ===== */
+.game-card {
+    background: rgba(31, 20, 50, 0.4) !important;
+    backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
+    -webkit-backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
+}
+
+.game-card:hover {
+    background: rgba(41, 27, 65, 0.5) !important;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(159, 83, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ===== FEATURE CARDS - GLASS EFFECT ===== */
+.feature-card {
+    background: rgba(31, 20, 50, 0.35) !important;
+    backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
+}
+
+.feature-card:hover {
+    background: rgba(41, 27, 65, 0.45) !important;
+    box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(159, 83, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ===== LOCATION CARDS - GLASS EFFECT ===== */
+.location-card {
+    background: rgba(31, 20, 50, 0.4) !important;
+    backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
+    -webkit-backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
+}
+
+.location-card.active {
+    background: rgba(45, 30, 70, 0.55) !important;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(159, 83, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+.location-card:hover:not(.active) {
+    background: rgba(41, 27, 65, 0.5) !important;
+    box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(159, 83, 255, 0.2) !important;
+}
+
+/* ===== TIER SELECTOR BUTTONS - GLASS ===== */
+.plan-tier-btn {
+    background: rgba(31, 20, 50, 0.35) !important;
+    backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
+}
+
+.plan-tier-btn.active {
+    background: rgba(45, 30, 70, 0.55) !important;
+    backdrop-filter: blur(40px) saturate(200%) brightness(1.2) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.2) !important;
+    box-shadow: 
+        0 8px 30px rgba(159, 83, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.plan-tier-btn:hover:not(.active) {
+    background: rgba(41, 27, 65, 0.45) !important;
+    box-shadow: 
+        0 4px 20px rgba(159, 83, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ===== SERVER CARD (HERO) - GLASS EFFECT ===== */
+.server-card {
+    background: rgba(31, 20, 50, 0.5) !important;
+    backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
+}
+
+.server-card:hover {
+    background: rgba(41, 27, 65, 0.6) !important;
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        0 0 120px rgba(159, 83, 255, 0.5) !important;
+}

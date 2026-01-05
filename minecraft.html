@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Minecraft Premium - Neovex Hosting</title>
+    <meta name="description" content="Hosting Minecraft optimizado con Ryzen 9 9950X, NVMe, Anti-DDoS 10Tb/s. Desde $2.99/mes. Soporte 24/7.">
+    
+    <link rel="icon" type="image/png" href="assets/images/logo-mobile.png">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="game-page">
+    <!-- Navigation (same as index) -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="assets/images/logo.png" alt="Neovex Hosting" class="logo-main">
+                        <img src="assets/images/logo-mobile.png" alt="Neovex Hosting" class="logo-mobile">
+                    </a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="/" class="nav-link">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#planes" class="nav-link active">Planes</a>
+                            <div class="dropdown-menu">
+                                <a href="minecraft.html">Minecraft</a>
+                                <a href="hytale.html">Hytale</a>
+                                <a href="#ark">ARK</a>
+                                <a href="#fivem">FiveM</a>
+                                <a href="#rust">Rust</a>
+                                <a href="#vps">VPS</a>
+                            </div>
+                        </li>
+                        <li><a href="/#ubicaciones" class="nav-link">Ubicaciones</a></li>
+                        <li><a href="#soporte" class="nav-link">Soporte</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <button class="lang-btn" id="langBtn">
+                                <span>🌐</span>
+                                <span id="currentLang">ES</span>
+                            </button>
+                            <div class="lang-dropdown" id="langDropdown">
+                                <a href="/" data-lang="es">Español</a>
+                                <a href="/en" data-lang="en">English</a>
+                                <a href="/fr" data-lang="fr">Français</a>
+                            </div>
+                        </div>
+                        <a href="#panel" class="btn-secondary">Panel</a>
+                        <a href="#comprar" class="btn-primary">Comprar Ahora</a>
+                    </div>
+                </div>
+
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 70vh; padding: 140px 0 80px;">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-gradient"></div>
+        
+        <div class="container">
+            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <div class="hero-badge" style="margin: 0 auto 2rem;">
+                    <span class="badge-icon game-page-icon">⛏️</span>
+                    <span>Hosting Minecraft</span>
+                </div>
+                
+                <h1 class="hero-title game-page-title" style="text-align: center;">
+                    <span class="title-line">Hosting Minecraft</span>
+                    <span class="title-line gradient-text">Premium</span>
+                </h1>
+                
+                <p class="hero-subtitle game-page-description" style="text-align: center; margin: 0 auto 2.5rem; max-width: 700px;">
+                    Servidores optimizados para Minecraft con soporte completo para mods, plugins, y cualquier versión. Hardware de última generación y protección DDoS incluida.
+                </p>
+
+                <div class="hero-cta" style="justify-content: center;">
+                    <a href="#planes" class="btn-hero-primary">
+                        <span>Ver Planes</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section" id="planes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planes de Minecraft</h2>
+                <p class="section-subtitle">Selecciona el plan ideal para tu servidor</p>
+            </div>
+
+            <div class="plans-selector">
+                <!-- Generado dinámicamente -->
+            </div>
+
+            <div class="plans-grid" id="plansGrid">
+                <!-- Generado dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Incluido en Todos los Planes</h2>
+                <p class="section-subtitle">Todo lo que necesitas para tu servidor Minecraft</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="url(#g1)" stroke-width="2"/>
+                            <defs><linearGradient id="g1"><stop offset="0%" stop-color="#9F53FF"/><stop offset="100%" stop-color="#5F27FF"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3>Anti-DDoS 10Tb/s</h3>
+                    <p>Protección Tunnel GRE de nivel empresarial contra cualquier ataque DDoS.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="7" height="7" stroke="url(#g2)" stroke-width="2" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="url(#g2)" stroke-width="2" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="url(#g2)" stroke-width="2" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="url(#g2)" stroke-width="2" rx="1"/>
+                            <defs><linearGradient id="g2"><stop offset="0%" stop-color="#9F53FF"/><stop offset="100%" stop-color="#5F27FF"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3>Mods & Plugins</h3>
+                    <p>Compatible con Forge, Fabric, Spigot, Paper, Purpur y más. Instalación con 1 click.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="url(#g3)" stroke-width="2"/>
+                            <defs><linearGradient id="g3"><stop offset="0%" stop-color="#9F53FF"/><stop offset="100%" stop-color="#5F27FF"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3>Panel Pterodactyl</h3>
+                    <p>Panel de control moderno con acceso FTP, gestor de archivos y consola en tiempo real.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="url(#g4)" stroke-width="2"/>
+                            <defs><linearGradient id="g4"><stop offset="0%" stop-color="#9F53FF"/><stop offset="100%" stop-color="#5F27FF"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3>Activación Instantánea</h3>
+                    <p>Tu servidor listo en menos de 60 segundos después de confirmar el pago.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="3" stroke="url(#g5)" stroke-width="2"/>
+                            <path d="M12 1v6m0 6v6M23 12h-6m-6 0H1" stroke="url(#g5)" stroke-width="2"/>
+                            <defs><linearGradient id="g5"><stop offset="0%" stop-color="#9F53FF"/><stop offset="100%" stop-color="#5F27FF"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3>Todas las Versiones</h3>
+                    <p>Desde 1.8 hasta la última versión. Cambia de versión cuando quieras con 1 click.</p>
+                </div>
+
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="url(#g6)" stroke-width="2"/>
+                            <polyline points="14,2 14,8 20,8" stroke="url(#g6)" stroke-width="2"/>
+                            <defs><linearGradient id="g6"><stop offset="0%" stop-color="#9F53FF"/><stop offset="100%" stop-color="#5F27FF"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3>Backups Automáticos</h3>
+                    <p>Backups automáticos diarios. Restaura tu servidor en cualquier momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para crear tu servidor?</h2>
+                <p>Comienza en menos de 60 segundos</p>
+                <div class="cta-buttons">
+                    <a href="#planes" class="btn-cta-primary">Elegir Plan</a>
+                    <a href="/" class="btn-cta-secondary">Ver Otros Juegos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="Neovex Hosting">
+                    </div>
+                    <p>Hosting premium para gaming. Servidores optimizados con la mejor infraestructura de LATAM.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Juegos</h4>
+                    <ul>
+                        <li><a href="minecraft.html">Minecraft</a></li>
+                        <li><a href="hytale.html">Hytale</a></li>
+                        <li><a href="#ark">ARK</a></li>
+                        <li><a href="#fivem">FiveM</a></li>
+                        <li><a href="#rust">Rust</a></li>
+                        <li><a href="#vps">VPS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#calculadora">Calculadora</a></li>
+                        <li><a href="#ping">Test de Ping</a></li>
+                        <li><a href="#speedtest">Speedtest</a></li>
+                        <li><a href="#docs">Documentación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#discord">Discord</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#terminos">Términos</a></li>
+                        <li><a href="#privacidad">Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neovex Hosting. Todos los derechos reservados.</p>
+                <div class="footer-payments">
+                    <span>Aceptamos:</span>
+                    <div class="payment-icons">
+                        <img src="assets/images/visa.webp" alt="Visa">
+                        <img src="assets/images/mastercard.webp" alt="Mastercard">
+                        <img src="assets/images/paypal.webp" alt="PayPal">
+                        <img src="assets/images/skrill.webp" alt="Skrill">
+                        <img src="assets/images/american-express.webp" alt="American Express">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/plansData.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/utilities.js"></script>
+    <script>
+        // Initialize game page
+        if (typeof GamePageRenderer !== 'undefined') {
+            const minecraftPage = new GamePageRenderer('minecraft');
+            minecraftPage.init();
+        }
+    </script>
+</body>
+</html>
