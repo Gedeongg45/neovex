@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="assets/images/logo-mobile.png">
     
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body class="game-page">
     <!-- Navigation (same as index) -->
@@ -16,15 +18,15 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="nav-logo">
-                    <a href="/">
-                        <img src="assets/images/logo.png" alt="Neovex Hosting" class="logo-main">
-                        <img src="assets/images/logo-mobile.png" alt="Neovex Hosting" class="logo-mobile">
+                    <a href="index.html">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting" class="logo-main">
+                        <img src="img/ui/logo-mobile.png" alt="Neovex Hosting" class="logo-mobile">
                     </a>
                 </div>
 
                 <div class="nav-menu" id="navMenu">
                     <ul class="nav-links">
-                        <li><a href="/" class="nav-link">Inicio</a></li>
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
                         <li class="dropdown">
                             <a href="#planes" class="nav-link active">Planes</a>
                             <div class="dropdown-menu">
@@ -39,7 +41,8 @@
                         <li><a href="/#ubicaciones" class="nav-link">Ubicaciones</a></li>
                         <li><a href="#soporte" class="nav-link">Soporte</a></li>
                     </ul>
-
+                    <a href="#panel" class="btn-secondary">Panel</a>
+                    
                     <div class="nav-actions">
                         <div class="language-selector">
                             <button class="lang-btn" id="langBtn">
@@ -52,10 +55,10 @@
                                 <a href="/fr" data-lang="fr">Français</a>
                             </div>
                         </div>
-                        <a href="#panel" class="btn-secondary">Panel</a>
-                        <a href="#comprar" class="btn-primary">Comprar Ahora</a>
                     </div>
+                    <a href="#comprar" class="btn-primary">Comprar Ahora</a>
                 </div>
+                
 
                 <button class="nav-toggle" id="navToggle">
                     <span></span>
@@ -67,27 +70,27 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="min-height: 70vh; padding: 140px 0 80px;">
+    <section class="hero">
         <div class="hero-particles" id="particles"></div>
         <div class="hero-gradient"></div>
         
         <div class="container">
-            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <div class="hero-badge" style="margin: 0 auto 2rem;">
+            <div class="hero-content">
+                <div class="hero-badge">
                     <span class="badge-icon game-page-icon">⛏️</span>
                     <span>Hosting Minecraft</span>
                 </div>
                 
-                <h1 class="hero-title game-page-title" style="text-align: center;">
+                <h1 class="hero-title game-page-title">
                     <span class="title-line">Hosting Minecraft</span>
                     <span class="title-line gradient-text">Premium</span>
                 </h1>
                 
-                <p class="hero-subtitle game-page-description" style="text-align: center; margin: 0 auto 2.5rem; max-width: 700px;">
+                <p class="hero-subtitle game-page-description">
                     Servidores optimizados para Minecraft con soporte completo para mods, plugins, y cualquier versión. Hardware de última generación y protección DDoS incluida.
                 </p>
 
-                <div class="hero-cta" style="justify-content: center;">
+                <div class="hero-cta">
                     <a href="#planes" class="btn-hero-primary">
                         <span>Ver Planes</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -96,13 +99,15 @@
                     </a>
                 </div>
             </div>
+                <div class="mineacraft-image-hero">
+                <img src="img/games/hosting-minecraft.png" alt="Minecraft Server Hosting" class="img-minecraft">
         </div>
     </section>
 
     <!-- Plans Section -->
-    <section class="plans-section" id="planes">
-        <div class="container">
-            <div class="section-header">
+    <section class="plans-section" id="planes" style="padding: 80px 0;">
+        <div class="container" style="max-width: 1200px; padding: 0 2rem;">
+            <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
                 <h2 class="section-title">Planes de Minecraft</h2>
                 <p class="section-subtitle">Selecciona el plan ideal para tu servidor</p>
             </div>
@@ -111,21 +116,21 @@
                 <!-- Generado dinámicamente -->
             </div>
 
-            <div class="plans-grid" id="plansGrid">
+            <div class="plans-grid" id="plansGrid" style="max-width: 1100px; margin: 0 auto;">
                 <!-- Generado dinámicamente -->
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="section-header">
+    <section class="features-section" style="padding: 80px 0;">
+        <div class="container" style="max-width: 1200px; padding: 0 2rem;">
+            <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
                 <h2 class="section-title">Incluido en Todos los Planes</h2>
                 <p class="section-subtitle">Todo lo que necesitas para tu servidor Minecraft</p>
             </div>
 
-            <div class="features-grid">
+            <div class="features-grid" style="max-width: 1100px; margin: 0 auto;">
                 <div class="feature-card scroll-reveal">
                     <div class="feature-icon">
                         <svg width="72" height="72" viewBox="0 0 24 24" fill="none">
@@ -201,12 +206,12 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
+    <section class="cta-section" style="padding: 80px 0;">
+        <div class="container" style="max-width: 900px; padding: 0 2rem;">
+            <div class="cta-content" style="text-align: center;">
                 <h2>¿Listo para crear tu servidor?</h2>
                 <p>Comienza en menos de 60 segundos</p>
-                <div class="cta-buttons">
+                <div class="cta-buttons" style="justify-content: center;">
                     <a href="#planes" class="btn-cta-primary">Elegir Plan</a>
                     <a href="/" class="btn-cta-secondary">Ver Otros Juegos</a>
                 </div>
@@ -220,7 +225,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="assets/images/logo.png" alt="Neovex Hosting">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting">
                     </div>
                     <p>Hosting premium para gaming. Servidores optimizados con la mejor infraestructura de LATAM.</p>
                     <div class="footer-social">
@@ -278,11 +283,11 @@
                 <div class="footer-payments">
                     <span>Aceptamos:</span>
                     <div class="payment-icons">
-                        <img src="assets/images/visa.webp" alt="Visa">
-                        <img src="assets/images/mastercard.webp" alt="Mastercard">
-                        <img src="assets/images/paypal.webp" alt="PayPal">
-                        <img src="assets/images/skrill.webp" alt="Skrill">
-                        <img src="assets/images/american-express.webp" alt="American Express">
+                        <img src="img/metodo de pago/visa.webp" alt="Visa">
+                        <img src="img/metodo de pago/mastercard.webp" alt="Mastercard">
+                        <img src="img/metodo de pago/paypal.webp" alt="PayPal">
+                        <img src="img/metodo de pago/skrill.webp" alt="Skrill">
+                        <img src="img/metodo de pago/american-express.webp" alt="American Express">
                     </div>
                 </div>
             </div>

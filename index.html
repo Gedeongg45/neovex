@@ -12,6 +12,7 @@
     <!-- CSS Professional -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -39,7 +40,7 @@
                                 <a href="#vps">VPS</a>
                             </div>
                         </li>
-                        <li><a href="#ubicaciones" class="nav-link" data-i18n="nav.locations">Ubicaciones</a></li>
+                        <li><a href="ubicacion.html" class="nav-link" data-i18n="nav.locations">Ubicaciones</a></li>
                         <li class="dropdown">
                             <a href="#herramientas" class="nav-link" data-i18n="nav.tools">Herramientas</a>
                             <div class="dropdown-menu">
@@ -51,6 +52,7 @@
                         <li><a href="#soporte" class="nav-link" data-i18n="nav.support">Soporte</a></li>
                     </ul>
 
+                   <a href="#panel" class="btn-secondary">Panel</a>
                     <div class="nav-actions">
                         <div class="language-selector">
                             <button class="lang-btn" id="langBtn">
@@ -63,9 +65,8 @@
                                 <a href="/fr" data-lang="fr">Français</a>
                             </div>
                         </div>
-                        <a href="#panel" class="btn-secondary" data-i18n="nav.panel">Panel</a>
-                        <a href="#comprar" class="btn-primary" data-i18n="nav.buyNow">Comprar Ahora</a>
                     </div>
+                    <a href="#comprar" class="btn-primary">Comprar Ahora</a>
                 </div>
 
                 <button class="nav-toggle" id="navToggle">
@@ -329,97 +330,127 @@
         </div>
     </section>
 
-    <!-- Locations Section -->
-    <section class="locations-section" id="ubicaciones">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Ubicaciones Globales</h2>
-                <p class="section-subtitle">Servidores cerca de tu comunidad</p>
+<!-- 
+    ========================================
+    SECCIÓN DE UBICACIONES - INDEX (MEJORADA)
+    Mapa minimalista y cards interactivas
+    ========================================
+-->
+
+<section class="locations-section" id="ubicaciones">
+    <!-- Ambient Glow Background -->
+    <div class="map-ambient-glow"></div>
+
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+            <h2 class="section-title">Infraestructura Global</h2>
+            <p class="section-subtitle">Baja latencia. Alta disponibilidad. Sin fronteras.</p>
+        </div>
+
+        <!-- Seamless Map Wrapper con Pins Interactivos -->
+        <div class="seamless-map-wrapper">
+            <img src="img/map/world-map.webp" alt="Global Network" class="seamless-map-image">
+            
+            <!-- Location Pins -->
+            <!-- Miami, USA -->
+            <div class="location-pin" style="top: 42%; left: 24%;" data-location="miami">
+                <div class="pin-pulse"></div>
+                <div class="pin-dot"></div>
             </div>
 
-            <div class="locations-map">
-                <div class="map-container">
-                    <img src="img/map/world-map.webp" alt="Mapa Mundial" class="world-map">
+            <!-- Quebec, Canadá -->
+            <div class="location-pin" style="top: 28%; left: 26%;" data-location="canada">
+                <div class="pin-pulse"></div>
+                <div class="pin-dot"></div>
+            </div>
+
+            <!-- São Paulo, Brasil -->
+            <div class="location-pin" style="top: 72%; left: 34%;" data-location="brasil">
+                <div class="pin-pulse"></div>
+                <div class="pin-dot"></div>
+            </div>
+        </div>
+
+        <!-- Locations Grid - Cards Interactivas -->
+        <div class="locations-grid">
+            
+            <!-- Card: Miami -->
+            <div class="location-card glass-card active" data-location="miami">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <!-- Top Section -->
+                    <div class="card-top">
+                        <span class="status-pill online">Online</span>
+                        <img src="assets/flags/us.svg" alt="USA" class="flag-icon">
+                    </div>
                     
-                    <div class="location-marker" style="left: 24.5%; top: 50.8%;" data-location="miami">
-                        <div class="marker-pulse"></div>
-                        <div class="marker-dot"></div>
-                        <div class="marker-label">
-                            <strong>Miami</strong>
-                            <span>USA</span>
-                        </div>
-                    </div>
-
-                    <div class="location-marker" style="left: 20%; top: 28%;" data-location="canada">
-                        <div class="marker-pulse"></div>
-                        <div class="marker-dot"></div>
-                        <div class="marker-label">
-                            <strong>Canadá</strong>
-                            <span>Quebec</span>
-                        </div>
-                    </div>
-
-                    <div class="location-marker" style="left: 34%; top: 69%;" data-location="brasil">
-                        <div class="marker-pulse"></div>
-                        <div class="marker-dot"></div>
-                        <div class="marker-label">
-                            <strong>Brasil</strong>
-                            <span>São Paulo</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="locations-grid">
-                    <div class="location-card active scroll-reveal" data-location="miami">
-                        <img src="assets/flags/us.svg" alt="USA" class="location-flag">
+                    <!-- Location Info -->
+                    <div class="location-info">
                         <h3>Miami</h3>
-                        <p>Estados Unidos</p>
-                        <div class="location-ping">
-                            <span class="ping-value">12ms</span>
-                            <span class="ping-label" data-i18n="locations.avgLatency">Latencia promedio LATAM</span>
-                        </div>
-                        <a href="#" class="location-test" data-i18n="locations.testPing">Test de Ping</a>
+                        <p>ESTADOS UNIDOS</p>
                     </div>
+                    
+                    <!-- Ping Statistics -->
+                    <div class="ping-stat">
+                        <span class="ms-value">9ms</span>
+                        <span class="ms-label">Latencia</span>
+                    </div>
+                    
+                    <!-- Action Button -->
+                    <button class="action-btn">Test de Ping →</button>
+                </div>
+            </div>
 
-                    <div class="location-card scroll-reveal" data-location="canada">
-                        <img src="assets/flags/canada.png" alt="Canada" class="location-flag">
+            <!-- Card: Canadá -->
+            <div class="location-card glass-card" data-location="canada">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-top">
+                        <span class="status-pill online">Online</span>
+                        <img src="assets/flags/canada.png" alt="Canada" class="flag-icon">
+                    </div>
+                    
+                    <div class="location-info">
                         <h3>Canadá</h3>
-                        <p>Quebec</p>
-                        <div class="location-ping">
-                            <span class="ping-value">18ms</span>
-                            <span class="ping-label" data-i18n="locations.avgLatency">Latencia promedio LATAM</span>
-                        </div>
-                        <a href="#" class="location-test" data-i18n="locations.testPing">Test de Ping</a>
+                        <p>QUEBEC</p>
                     </div>
+                    
+                    <div class="ping-stat">
+                        <span class="ms-value">12ms</span>
+                        <span class="ms-label">Latencia</span>
+                    </div>
+                    
+                    <button class="action-btn">Test de Ping →</button>
+                </div>
+            </div>
 
-                    <div class="location-card upcoming scroll-reveal" data-location="brasil">
-                        <img src="assets/flags/brasil.png" alt="Brasil" class="location-flag">
+            <!-- Card: Brasil (Upcoming) -->
+            <div class="location-card glass-card upcoming" data-location="brasil">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-top">
+                        <span class="status-pill coming-soon">Pronto</span>
+                        <img src="assets/flags/brasil.png" alt="Brasil" class="flag-icon">
+                    </div>
+                    
+                    <div class="location-info">
                         <h3>Brasil</h3>
-                        <p>São Paulo</p>
-                        <div class="location-ping">
-                            <span class="ping-value">Q2 2025</span>
-                            <span class="ping-label">Próximamente</span>
-                        </div>
-                        <a href="#" class="location-test disabled">Notificarme</a>
+                        <p>SÃO PAULO</p>
                     </div>
+                    
+                    <div class="ping-stat">
+                        <span class="ms-value">Q2 2025</span>
+                        <span class="ms-label">Disponible Pronto</span>
+                    </div>
+                    
+                    <button class="action-btn notify">Notificarme 🔔</button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>¿Listo para empezar?</h2>
-                <p>Crea tu servidor en menos de 60 segundos</p>
-                <div class="cta-buttons">
-                    <a href="#planes" class="btn-cta-primary">Ver Planes</a>
-                    <a href="#calculadora" class="btn-cta-secondary">Calculadora</a>
-                </div>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -509,4 +540,7 @@
     <script src="js/animations.js"></script>
     <script src="js/utilities.js"></script>
     <script src="js/plansData.js"></script>
+    <script src="js/ubicaciones-index.js"></script>
+    
+</body>
 </html>

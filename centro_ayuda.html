@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Minecraft Premium - Neovex Hosting</title>
+    <meta name="description" content="Hosting Minecraft optimizado con Ryzen 9 9950X, NVMe, Anti-DDoS 10Tb/s. Desde $2.99/mes. Soporte 24/7.">
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" type="image/png" href="img/ui/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/centro_ayuda.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body class="game-page">
+    <!-- Navigation (same as index) -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting" class="logo-main">
+                        <img src="img/ui/logo-mobile.png" alt="Neovex Hosting" class="logo-mobile">
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="/" class="nav-link">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#planes">Planes</a>
+                            <div class="dropdown-menu">
+                                <a href="#ayudas" class="nav-link active">ayudas</a>
+                                <a href="minecraft.html">Minecraft</a>
+                                <a href="hytale.html">Hytale</a>
+                                <a href="#ark">ARK</a>
+                                <a href="#fivem">FiveM</a>
+                                <a href="#rust">Rust</a>
+                                <a href="#vps">VPS</a>
+                            </div>
+                        </li>
+                        <li><a href="/#ubicaciones" class="nav-link">Ubicaciones</a></li>
+                        <li><a href="#soporte" class="nav-link">Soporte</a></li>
+                    </ul>
+                    <div>
+                        <a href="#panel" class="btn-secondary">Panel</a>
+                    </div>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <button class="lang-btn" id="langBtn">
+                                <span>🌐</span>
+                                <span id="currentLang">ES</span>
+                            </button>
+                            <div class="lang-dropdown" id="langDropdown">
+                                <a href="/" data-lang="es">Español</a>
+                                <a href="/en" data-lang="en">English</a>
+                                <a href="/fr" data-lang="fr">Français</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#comprar" class="btn-primary">Comprar Ahora</a>
+                    </div>
+                    
+                </div>
+
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+<div class="help-hero">
+    <div class="content-wrapper">
+        <p class="subtitle">CENTRO DE AYUDA</p>
+        <h1 class="title">Todo lo básico de <span class="brand">Neovex</span> en un solo lugar</h1>
+        <p class="description">
+            Esta página resume cómo funcionan los pagos, renovaciones, rendimiento, 
+            soporte y migraciones. La idea es que tengas claro qué estás comprando antes 
+            de abrir un ticket.
+        </p>
+    </div>
+</div>
+
+<section class="help-content">
+    <div class="glass-grid animate__animated animate__bounce animate__fadeInRight">
+        <div class="glass-card">
+            <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+            </div>
+            <h3 class="card-title">Pagos Y Renovaciones</h3>
+            <p class="card-description">Informacion general sobre metodos de pago, vencimientos y que pasa si una factura no se paga a tiempo.</p>
+            <ul class="card-list">
+                <li>Pagos digitales (PayPal, tarjeta, etc).</li>
+                <li>Renovaciones mensuales automatizadas.</li>
+                <li>Periodo de gracia antes de eliminar un servicio.</li>
+            </ul>
+        </div>
+
+        <div class="glass-card">
+            <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cog-icon lucide-cog"><path d="M11 10.27 7 3.34"/><path d="m11 13.73-4 6.93"/><path d="M12 22v-2"/><path d="M12 2v2"/><path d="M14 12h8"/><path d="m17 20.66-1-1.73"/><path d="m17 3.34-1 1.73"/><path d="M2 12h2"/><path d="m20.66 17-1.73-1"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m3.34 7 1.73 1"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="8"/></svg></div>
+            <h3 class="card-title">Rendimiento y ubicaciones</h3>
+            <p class="card-description">Como estan configurados los nodos, ping estimado para LATAM y recomendaciones de plan segun tu proyecto.</p>
+            <ul class="card-list">
+                <li>odos con hardware moderno y NVMe.</li>
+                <li>Ubicaciones pensadas para jugadores de Latinoamerica.</li>
+                <li>Ayuda para elegir la memoria y vCores adecuados.</li>
+            </ul>
+        </div>
+        <div class="glass-card">
+            <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            </div>
+            <h3 class="card-title">Soporte y migraciones</h3>
+            <p class="card-description">Que cubre el soporte tecnico, como contactarnos y como funciona la migracion desde otro hosting.</p>
+            <ul class="card-list">
+                <li>Soporte por tickets y Discord.</li>
+                <li>Ayuda para mover tu servidor a Neovex.</li>
+                <li>Recomendaciones sobre copias de seguridad.</li>
+            </ul>
+        </div>
+    </div>
+</section>  
+<div class="title-faq">
+    <h1>
+        Preguntas <span class="brand">Frecuentes</span>
+    </h1>
+</div>
+<section class="help-content">
+    <div class="faq-container glass-card">
+        <div class="faq-grid">
+            <div class="faq-column">
+                <details class="faq-item">
+                    <summary>¿Que Metodos De Pagos Aceptamos?</summary>
+                    <div class="faq-answer">
+                        Trabajamos con pagos digitales como PayPal y tarjeta de credito / debito a traves de nuestro panel de facturacion. Segun el pais tambien podemos habilitar otras opciones. Si tienes dudas exactas sobre como pagar, puedes abrir un ticket en billing.                     </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Que Pasa Si No Pago A Tiempo?</summary>
+                    <div class="faq-answer">
+                        Cuando un servicio vence pasa primero a estado suspendido. Durante un tiempo de gracia aun puedes pagar la factura y recuperar el acceso. Si se deja pasar demasiado, el servicio se elimina junto con sus archivos                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Puedo Cambiar El Plan Mas Adelante?</summary>
+                    <div class="faq-answer">
+                        Si, es posible subir o ajustar un plan. En la mayoria de casos se puede coordinar por ticket para evitar perdida de datos y mantener la configuracion de tu servidor.                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Hacemos Reembolso?</summary>
+                    <div class="faq-answer">
+                        Sí, nuestro equipo técnico se encarga de mover todos tus archivos y bases de datos desde tu hosting anterior sin costo adicional.
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-column">
+                <details class="faq-item">
+                    <summary>Como Va El Ping Para Jugar En Latinoamerica</summary>
+                    <div class="faq-answer">
+                        Nuestros nodos estan ubicados en centros de datos con buena ruta hacia Latinoamerica. En general los jugadores de Peru, Chile, Ecuador y paises cercanos manejan pings bajos. Si quieres probar antes de comprar, podemos pasarte IP de prueba.                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Ayudamos En La Eleccion Del Plan Correcto?</summary>
+                    <div class="faq-answer">
+                        Si nos explicas que modo usas (survival, boxpvp, modpack, etc.) y cuantos jugadores esperas, podemos recomendarte un plan concreto. Lo ideal es que abras un ticket o nos hables por Discord con esa informacion.
+                    </div>
+                </details>
+                                <details class="faq-item">
+                    <summary>Que Tipo De Soporte Incluye Neovex?</summary>
+                    <div class="faq-answer">
+                        Nos encargamos de que tu servicio este en linea: panel, red, rendimiento del nodo y acceso. Tambien podemos orientar con ajustes basicos de plugins o mods. Cambios mas avanzados o desarrollos a medida pueden requerir costo adicional.
+                    </div>
+                </details>
+                                <details class="faq-item">
+                    <summary>Ayudan A Migrar Mi Servidor Desde Otro Hosting?</summary>
+                    <div class="faq-answer">
+                        Si, podemos ayudarte a mover tu servidor a Neovex. Normalmente necesitamos un backup o acceso al hosting anterior. Coordina la migracion por ticket para acordar horario y pasos a seguir.
+                    </div>
+                </details>
+                                <details class="faq-item">
+                    <summary>Que Proyectos No Estan Permitidos?</summary>
+                    <div class="faq-answer">
+                        No se permiten actividades ilegales, ataques, botnets ni contenido que viole derechos de terceros. Proyectos que saturen de forma abusiva CPU o red tambien pueden ser limitados. Los detalles completos estan descritos en nuestros terminos y condiciones.
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div>
+            <p style="margin: 10px; color:gray; font-size: 0.8rem;" > Si tu duda no aparece aqui, puedes abrir un ticket<br> o unirte a nuestro grupo de Discord</p>
+            <a href="#" class="btn-primary btn-center">Abrir Ticket De Soporte</a>
+            <a href="#" class="btn-secondary btn-center" style="margin-top: 10px;">Unirse Al Discord</a>
+        </div>
+    </div>
+</section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting">
+                    </div>
+                    <p>Hosting premium para gaming. Servidores optimizados con la mejor infraestructura de LATAM.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Juegos</h4>
+                    <ul>
+                        <li><a href="minecraft.html">Minecraft</a></li>
+                        <li><a href="hytale.html">Hytale</a></li>
+                        <li><a href="#ark">ARK</a></li>
+                        <li><a href="#fivem">FiveM</a></li>
+                        <li><a href="#rust">Rust</a></li>
+                        <li><a href="#vps">VPS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#calculadora">Calculadora</a></li>
+                        <li><a href="#ping">Test de Ping</a></li>
+                        <li><a href="#speedtest">Speedtest</a></li>
+                        <li><a href="#status">Estado</a></li>
+                        <li><a href="#docs">Documentación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#discord">Discord</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                        <li><a href="#migracion">Migración Gratis</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#terminos">Términos</a></li>
+                        <li><a href="#privacidad">Privacidad</a></li>
+                        <li><a href="#afiliados">Afiliados</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neovex Hosting. Todos los derechos reservados.</p>
+                <div class="footer-payments">
+                    <span>Aceptamos:</span>
+                    <div class="payment-icons">
+                        <img src="img/metodo de pago/visa.webp" alt="Visa">
+                        <img src="img/metodo de pagomastercard.webp" alt="Mastercard">
+                        <img src="img/metodo de pagopaypal.webp" alt="PayPal">
+                        <img src="img/metodo de pagoskrill.webp" alt="Skrill">
+                        <img src="img/metodo de pagoamerican-express.webp" alt="American Express">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>   

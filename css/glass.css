@@ -1,147 +1,249 @@
 /* ========================================
-   GLASS MORPHISM CARDS - MEJORAS SUAVES
-   Solo mejora visual sin romper estilos existentes
-   Agregar DESPUÉS del CSS principal
+   GLASS MORPHISM CARDS - TRANSPARENTE + NEON
+   Fondo transparente con efecto neón morado
    ======================================== */
 
-/* ===== PLAN CARDS - GLASS EFFECT (MEJORA) ===== */
+/* ===== PLAN CARDS - GLASS TRANSPARENTE + NEON ===== */
 .plan-card {
-    background: rgba(31, 20, 50, 0.45) !important;
-    backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
-    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
+    background: rgba(15, 10, 25, 0.25) !important;
+    backdrop-filter: blur(30px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+    border: 1.5px solid rgba(159, 83, 255, 0.4) !important;
+    box-shadow: 
+        0 0 30px rgba(159, 83, 255, 0.3),
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Reflejo de luz superior (opcional - solo visual) */
+/* Reflejo de luz superior neón */
 .plan-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 2px;
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(255, 255, 255, 0.3) 30%,
-        rgba(255, 255, 255, 0.3) 70%,
+        rgba(159, 83, 255, 0.8) 20%,
+        rgba(185, 129, 255, 1) 50%,
+        rgba(159, 83, 255, 0.8) 80%,
         transparent
     );
+    filter: blur(2px);
     z-index: 1;
     pointer-events: none;
+    animation: neonPulseTop 3s ease-in-out infinite;
 }
 
-/* ===== HOVER MEJORADO ===== */
+@keyframes neonPulseTop {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* ===== HOVER MEJORADO CON NEON ===== */
 .plan-card:hover {
-    background: rgba(41, 27, 65, 0.55) !important;
+    background: rgba(20, 15, 35, 0.35) !important;
+    border-color: rgba(159, 83, 255, 0.8) !important;
     box-shadow: 
-        0 25px 70px rgba(0, 0, 0, 0.6),
+        0 0 50px rgba(159, 83, 255, 0.6),
         0 0 100px rgba(159, 83, 255, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+        0 25px 70px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 0 60px rgba(159, 83, 255, 0.1) !important;
 }
 
-/* ===== FEATURED CARD - MÁS DESTACADA ===== */
+/* ===== FEATURED CARD - NEON MÁS INTENSO ===== */
 .plan-card.featured {
-    background: rgba(45, 30, 70, 0.55) !important;
-    border-color: rgba(159, 83, 255, 0.6) !important;
+    background: rgba(20, 15, 35, 0.3) !important;
+    border-color: rgba(159, 83, 255, 0.7) !important;
     box-shadow: 
+        0 0 40px rgba(159, 83, 255, 0.5),
+        0 0 80px rgba(159, 83, 255, 0.3),
         0 20px 60px rgba(0, 0, 0, 0.5),
-        0 0 80px rgba(159, 83, 255, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 0 80px rgba(159, 83, 255, 0.15) !important;
+    animation: neonGlow 3s ease-in-out infinite;
+}
+
+@keyframes neonGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 40px rgba(159, 83, 255, 0.5),
+            0 0 80px rgba(159, 83, 255, 0.3),
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15),
+            inset 0 0 80px rgba(159, 83, 255, 0.15);
+    }
+    50% {
+        box-shadow: 
+            0 0 60px rgba(159, 83, 255, 0.7),
+            0 0 120px rgba(159, 83, 255, 0.5),
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2),
+            inset 0 0 100px rgba(159, 83, 255, 0.2);
+    }
 }
 
 .plan-card.featured:hover {
-    background: rgba(50, 35, 75, 0.65) !important;
+    background: rgba(25, 18, 40, 0.4) !important;
+    border-color: rgba(185, 129, 255, 1) !important;
     box-shadow: 
+        0 0 70px rgba(159, 83, 255, 0.8),
+        0 0 140px rgba(159, 83, 255, 0.5),
         0 30px 80px rgba(0, 0, 0, 0.7),
-        0 0 120px rgba(159, 83, 255, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        inset 0 0 100px rgba(159, 83, 255, 0.2) !important;
 }
 
-/* ===== GAME CARDS - GLASS EFFECT ===== */
+/* ===== GAME CARDS - GLASS TRANSPARENTE + NEON ===== */
 .game-card {
-    background: rgba(31, 20, 50, 0.4) !important;
-    backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
-    -webkit-backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
+    background: rgba(15, 10, 25, 0.2) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 1px solid rgba(159, 83, 255, 0.3) !important;
+    box-shadow: 
+        0 0 20px rgba(159, 83, 255, 0.2),
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
 .game-card:hover {
-    background: rgba(41, 27, 65, 0.5) !important;
+    background: rgba(20, 15, 35, 0.3) !important;
+    border-color: rgba(159, 83, 255, 0.6) !important;
     box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(159, 83, 255, 0.5),
         0 0 80px rgba(159, 83, 255, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 0 60px rgba(159, 83, 255, 0.1) !important;
 }
 
-/* ===== FEATURE CARDS - GLASS EFFECT ===== */
+/* ===== FEATURE CARDS - GLASS TRANSPARENTE + NEON ===== */
 .feature-card {
-    background: rgba(31, 20, 50, 0.35) !important;
-    backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
-    -webkit-backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
+    background: rgba(15, 10, 25, 0.18) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(159, 83, 255, 0.25) !important;
+    box-shadow: 
+        0 0 15px rgba(159, 83, 255, 0.15),
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
 }
 
 .feature-card:hover {
-    background: rgba(41, 27, 65, 0.45) !important;
+    background: rgba(20, 15, 35, 0.28) !important;
+    border-color: rgba(159, 83, 255, 0.5) !important;
     box-shadow: 
+        0 0 35px rgba(159, 83, 255, 0.4),
+        0 0 70px rgba(159, 83, 255, 0.2),
         0 15px 50px rgba(0, 0, 0, 0.4),
-        0 0 60px rgba(159, 83, 255, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 0 50px rgba(159, 83, 255, 0.08) !important;
 }
 
-/* ===== LOCATION CARDS - GLASS EFFECT ===== */
+/* ===== LOCATION CARDS - GLASS TRANSPARENTE + NEON ===== */
 .location-card {
-    background: rgba(31, 20, 50, 0.4) !important;
-    backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
-    -webkit-backdrop-filter: blur(35px) saturate(180%) brightness(1.1) !important;
+    background: rgba(15, 10, 25, 0.2) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 2px solid rgba(159, 83, 255, 0.3) !important;
+    box-shadow: 
+        0 0 20px rgba(159, 83, 255, 0.2),
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
 .location-card.active {
-    background: rgba(45, 30, 70, 0.55) !important;
+    background: rgba(25, 18, 40, 0.35) !important;
+    border-color: rgba(159, 83, 255, 0.7) !important;
     box-shadow: 
+        0 0 50px rgba(159, 83, 255, 0.6),
+        0 0 100px rgba(159, 83, 255, 0.3),
         0 20px 60px rgba(0, 0, 0, 0.5),
-        0 0 80px rgba(159, 83, 255, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 0 80px rgba(159, 83, 255, 0.15) !important;
 }
 
 .location-card:hover:not(.active) {
-    background: rgba(41, 27, 65, 0.5) !important;
+    background: rgba(20, 15, 35, 0.3) !important;
+    border-color: rgba(159, 83, 255, 0.5) !important;
     box-shadow: 
+        0 0 35px rgba(159, 83, 255, 0.4),
+        0 0 70px rgba(159, 83, 255, 0.2),
         0 15px 50px rgba(0, 0, 0, 0.4),
-        0 0 60px rgba(159, 83, 255, 0.2) !important;
+        inset 0 0 60px rgba(159, 83, 255, 0.1) !important;
 }
 
-/* ===== TIER SELECTOR BUTTONS - GLASS ===== */
+/* ===== TIER SELECTOR BUTTONS - GLASS + NEON ===== */
 .plan-tier-btn {
-    background: rgba(31, 20, 50, 0.35) !important;
-    backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
-    -webkit-backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
+    background: rgba(15, 10, 25, 0.2) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 2px solid rgba(159, 83, 255, 0.3) !important;
+    box-shadow: 
+        0 0 15px rgba(159, 83, 255, 0.15),
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
 }
 
 .plan-tier-btn.active {
-    background: rgba(45, 30, 70, 0.55) !important;
-    backdrop-filter: blur(40px) saturate(200%) brightness(1.2) !important;
-    -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.2) !important;
+    background: rgba(25, 18, 40, 0.35) !important;
+    backdrop-filter: blur(30px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+    border-color: rgba(159, 83, 255, 0.8) !important;
     box-shadow: 
-        0 8px 30px rgba(159, 83, 255, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+        0 0 40px rgba(159, 83, 255, 0.5),
+        0 0 80px rgba(159, 83, 255, 0.3),
+        0 8px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 0 60px rgba(159, 83, 255, 0.15) !important;
 }
 
 .plan-tier-btn:hover:not(.active) {
-    background: rgba(41, 27, 65, 0.45) !important;
+    background: rgba(20, 15, 35, 0.28) !important;
+    border-color: rgba(159, 83, 255, 0.5) !important;
     box-shadow: 
-        0 4px 20px rgba(159, 83, 255, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+        0 0 25px rgba(159, 83, 255, 0.3),
+        0 0 50px rgba(159, 83, 255, 0.15),
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 40px rgba(159, 83, 255, 0.08) !important;
 }
 
-/* ===== SERVER CARD (HERO) - GLASS EFFECT ===== */
+/* ===== SERVER CARD (HERO) - GLASS + NEON ===== */
 .server-card {
-    background: rgba(31, 20, 50, 0.5) !important;
-    backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
-    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.15) !important;
+    background: rgba(15, 10, 25, 0.25) !important;
+    backdrop-filter: blur(35px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(35px) saturate(180%) !important;
+    border: 1.5px solid rgba(159, 83, 255, 0.4) !important;
+    box-shadow: 
+        0 0 35px rgba(159, 83, 255, 0.35),
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 80px rgba(159, 83, 255, 0.1) !important;
 }
 
 .server-card:hover {
-    background: rgba(41, 27, 65, 0.6) !important;
+    background: rgba(20, 15, 35, 0.35) !important;
+    border-color: rgba(159, 83, 255, 0.7) !important;
     box-shadow: 
+        0 0 60px rgba(159, 83, 255, 0.6),
+        0 0 120px rgba(159, 83, 255, 0.4),
         0 30px 80px rgba(0, 0, 0, 0.6),
-        0 0 120px rgba(159, 83, 255, 0.5) !important;
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 0 100px rgba(159, 83, 255, 0.15) !important;
+}
+
+/* ===== ANIMACIÓN NEÓN PARA BORDES ===== */
+@keyframes neonBorderPulse {
+    0%, 100% {
+        border-color: rgba(159, 83, 255, 0.4);
+        filter: drop-shadow(0 0 5px rgba(159, 83, 255, 0.3));
+    }
+    50% {
+        border-color: rgba(159, 83, 255, 0.7);
+        filter: drop-shadow(0 0 15px rgba(159, 83, 255, 0.6));
+    }
 }

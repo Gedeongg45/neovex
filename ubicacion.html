@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicaciones Globales - Neovex Hosting | Infraestructura Premium</title>
+    <meta name="description" content="Red global de servidores en Miami, Canadá y Brasil. Baja latencia, alta disponibilidad y protección DDoS 10Tb/s.">
+    
+    <link rel="icon" type="image/png" href="assets/images/logo-mobile.png">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting" class="logo-main">
+                        <img src="img/ui/logo-mobile.png" alt="Neovex Hosting" class="logo-mobile">
+                    </a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="#inicio" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#planes" class="nav-link" data-i18n="nav.plans">Planes</a>
+                            <div class="dropdown-menu">
+                                <a href="minecraft.html">Minecraft</a>
+                                <a href="hytale.html">Hytale</a>
+                                <a href="#ark">ARK</a>
+                                <a href="#fivem">FiveM</a>
+                                <a href="#rust">Rust</a>
+                                <a href="#vps">VPS</a>
+                            </div>
+                        </li>
+                        <li><a href="ubicacion.html" class="nav-link" data-i18n="nav.locations">Ubicaciones</a></li>
+                        <li class="dropdown">
+                            <a href="#herramientas" class="nav-link" data-i18n="nav.tools">Herramientas</a>
+                            <div class="dropdown-menu">
+                                <a href="#calculadora" data-i18n="footer.calculator">Calculadora</a>
+                                <a href="#ping" data-i18n="footer.pingTest">Test de Ping</a>
+                                <a href="#speedtest" data-i18n="footer.speedtest">Speedtest</a>
+                            </div>
+                        </li>
+                        <li><a href="#soporte" class="nav-link" data-i18n="nav.support">Soporte</a></li>
+                    </ul>
+
+                   <a href="#panel" class="btn-secondary">Panel</a>
+                    <div class="nav-actions">
+                        <div class="language-selector">
+                            <button class="lang-btn" id="langBtn">
+                                <span>🌐</span>
+                                <span id="currentLang">ES</span>
+                            </button>
+                            <div class="lang-dropdown" id="langDropdown">
+                                <a href="/" data-lang="es">Español</a>
+                                <a href="/en" data-lang="en">English</a>
+                                <a href="/fr" data-lang="fr">Français</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#comprar" class="btn-primary">Comprar Ahora</a>
+                </div>
+
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="locations-hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span>3 Ubicaciones Estratégicas</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Infraestructura</span>
+                    <span class="title-line gradient-text">Global Premium</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Red de servidores distribuida estratégicamente para ofrecer<br>
+                    <strong>baja latencia, alta disponibilidad y máxima velocidad</strong> en toda LATAM
+                </p>
+
+                <div class="hero-stats-compact">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="99.9">0</span>
+                        <span class="stat-label">% Uptime SLA</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">&lt;<span data-count="15">0</span></span>
+                        <span class="stat-label">ms Latencia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Tb/s Anti-DDoS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Network Monitor -->
+    <section class="network-monitor">
+        <div class="container">
+            <div class="monitor-grid">
+                <div class="monitor-card">
+                    <div class="monitor-icon">🌐</div>
+                    <div class="monitor-data">
+                        <span class="monitor-value" id="activeServers">128</span>
+                        <span class="monitor-label">Servidores Activos</span>
+                    </div>
+                    <div class="monitor-trend up">+12%</div>
+                </div>
+                <div class="monitor-card">
+                    <div class="monitor-icon">⚡</div>
+                    <div class="monitor-data">
+                        <span class="monitor-value" id="avgLatency">9ms</span>
+                        <span class="monitor-label">Latencia Promedio</span>
+                    </div>
+                    <div class="monitor-trend stable">Estable</div>
+                </div>
+                <div class="monitor-card">
+                    <div class="monitor-icon">🔒</div>
+                    <div class="monitor-data">
+                        <span class="monitor-value" id="blockedAttacks">47</span>
+                        <span class="monitor-label">Ataques Bloqueados (24h)</span>
+                    </div>
+                    <div class="monitor-trend up">+8</div>
+                </div>
+                <div class="monitor-card">
+                    <div class="monitor-icon">📊</div>
+                    <div class="monitor-data">
+                        <span class="monitor-value" id="dataTransfer">2.4TB</span>
+                        <span class="monitor-label">Datos Transferidos</span>
+                    </div>
+                    <div class="monitor-trend up">+23%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="interactive-map-section">
+        <div class="map-ambient-core"></div>
+        <div class="scan-lines"></div>
+        
+        <div class="container">
+            <!-- Map Controls -->
+            <div class="map-controls">
+                <button class="map-control-btn active" data-view="globe">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span>Vista Global</span>
+                </button>
+                <button class="map-control-btn" data-view="connections">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                    </svg>
+                    <span>Rutas de Red</span>
+                </button>
+                <button class="map-control-btn" data-view="latency">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                    <span>Mapa de Latencia</span>
+                </button>
+            </div>
+
+            <!-- Map Container -->
+            <div class="world-map-container">
+                <div class="map-hud-overlay">
+                    <div class="hud-corner tl"></div>
+                    <div class="hud-corner tr"></div>
+                    <div class="hud-corner bl"></div>
+                    <div class="hud-corner br"></div>
+                    
+                    <!-- Live Stats Overlay -->
+                    <div class="map-live-stats">
+                        <div class="live-stat">
+                            <span class="pulse-indicator"></span>
+                            <span>Live Network Status</span>
+                        </div>
+                        <div class="live-stat">
+                            <span class="stat-icon">⚡</span>
+                            <span id="networkLoad">87%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="img/map/world-map.webp" alt="Global Network" class="world-map-image">
+                
+                <!-- Connection Lines (Animated) -->
+                <svg class="connection-lines" viewBox="0 0 1200 600">
+                    <defs>
+                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#9F53FF;stop-opacity:0" />
+                            <stop offset="50%" style="stop-color:#9F53FF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#9F53FF;stop-opacity:0" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Miami to Canada -->
+                    <path class="connection-line" d="M 288 250 Q 300 170, 312 168" stroke="url(#lineGradient)" stroke-width="2" fill="none" filter="url(#glow)"/>
+                    <!-- Data packets -->
+                    <circle class="data-packet" cx="288" cy="250" r="4" fill="#9F53FF">
+                        <animateMotion dur="3s" repeatCount="indefinite" path="M 0 0 Q 12 -80, 24 -82"/>
+                    </circle>
+                    
+                    <!-- Miami to Brasil -->
+                    <path class="connection-line" d="M 288 250 Q 350 400, 408 430" stroke="url(#lineGradient)" stroke-width="2" fill="none" filter="url(#glow)"/>
+                    <circle class="data-packet" cx="288" cy="250" r="4" fill="#9F53FF">
+                        <animateMotion dur="4s" repeatCount="indefinite" path="M 0 0 Q 62 150, 120 180"/>
+                    </circle>
+                    
+                    <!-- Canada to Brasil -->
+                    <path class="connection-line" d="M 312 168 Q 360 300, 408 430" stroke="url(#lineGradient)" stroke-width="2" fill="none" filter="url(#glow)"/>
+                    <circle class="data-packet" cx="312" cy="168" r="4" fill="#9F53FF">
+                        <animateMotion dur="5s" repeatCount="indefinite" path="M 0 0 Q 48 132, 96 262"/>
+                    </circle>
+                </svg>
+
+                <!-- Location Pins with Enhanced Effects -->
+                <div class="location-beacon" style="top: 42%; left: 24%;" data-location="miami">
+                    <div class="beacon-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                    <div class="beacon-core"></div>
+                    <div class="beacon-beam"></div>
+                    <div class="beacon-label">
+                        <span class="label-city">Miami</span>
+                        <span class="label-country">USA</span>
+                    </div>
+                    <!-- Enhanced Tooltip -->
+                    <div class="beacon-tooltip">
+                        <div class="tooltip-header">
+                            <span>🇺🇸 Miami, USA</span>
+                            <span class="tooltip-status online">● Online</span>
+                        </div>
+                        <div class="tooltip-metrics">
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Latencia:</span>
+                                <span class="metric-value">8-12ms</span>
+                            </div>
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Carga:</span>
+                                <span class="metric-value">67%</span>
+                            </div>
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Uptime:</span>
+                                <span class="metric-value">99.98%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-beacon" style="top: 28%; left: 26%;" data-location="canada">
+                    <div class="beacon-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                    <div class="beacon-core"></div>
+                    <div class="beacon-beam"></div>
+                    <div class="beacon-label">
+                        <span class="label-city">Quebec</span>
+                        <span class="label-country">Canadá</span>
+                    </div>
+                    <div class="beacon-tooltip">
+                        <div class="tooltip-header">
+                            <span>🇨🇦 Quebec, Canadá</span>
+                            <span class="tooltip-status online">● Online</span>
+                        </div>
+                        <div class="tooltip-metrics">
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Latencia:</span>
+                                <span class="metric-value">10-14ms</span>
+                            </div>
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Carga:</span>
+                                <span class="metric-value">52%</span>
+                            </div>
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Uptime:</span>
+                                <span class="metric-value">99.96%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-beacon upcoming" style="top: 72%; left: 34%;" data-location="brasil">
+                    <div class="beacon-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                    <div class="beacon-core"></div>
+                    <div class="beacon-beam"></div>
+                    <div class="beacon-label">
+                        <span class="label-city">São Paulo</span>
+                        <span class="label-country">Brasil</span>
+                    </div>
+                    <div class="beacon-tooltip">
+                        <div class="tooltip-header">
+                            <span>🇧🇷 São Paulo, Brasil</span>
+                            <span class="tooltip-status coming">● Q2 2025</span>
+                        </div>
+                        <div class="tooltip-metrics">
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Latencia Est.:</span>
+                                <span class="metric-value">~8ms</span>
+                            </div>
+                            <div class="tooltip-metric">
+                                <span class="metric-label">Capacidad:</span>
+                                <span class="metric-value">1000+ slots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Comparison Tool -->
+            <div class="location-comparator">
+                <h3>🔍 Comparador de Ubicaciones</h3>
+                <div class="comparator-grid">
+                    <div class="comparison-card" data-location="miami">
+                        <input type="checkbox" class="location-checkbox" id="compare-miami" checked>
+                        <label for="compare-miami">
+                            <span class="flag">🇺🇸</span>
+                            <span>Miami</span>
+                        </label>
+                    </div>
+                    <div class="comparison-card" data-location="canada">
+                        <input type="checkbox" class="location-checkbox" id="compare-canada" checked>
+                        <label for="compare-canada">
+                            <span class="flag">🇨🇦</span>
+                            <span>Canadá</span>
+                        </label>
+                    </div>
+                    <div class="comparison-card" data-location="brasil">
+                        <input type="checkbox" class="location-checkbox" id="compare-brasil">
+                        <label for="compare-brasil">
+                            <span class="flag">🇧🇷</span>
+                            <span>Brasil</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="comparison-results" id="comparisonResults"></div>
+            </div>
+
+            <!-- Location Detail Cards -->
+            <div class="locations-details-grid">
+                <!-- Miami -->
+                <div class="location-detail-card active" data-location="miami">
+                    <div class="card-glow-effect"></div>
+                    <div class="card-header">
+                        <div class="header-left">
+                            <div class="flag-wrapper">
+                                <span class="flag-emoji">🇺🇸</span>
+                            </div>
+                            <div class="location-title">
+                                <h3>Miami</h3>
+                                <p>Florida, USA</p>
+                            </div>
+                        </div>
+                        <div class="status-badge online">
+                            <span class="pulse-dot"></span>
+                            Online
+                        </div>
+                    </div>
+
+                    <div class="card-metrics">
+                        <div class="metric">
+                            <div class="metric-icon">⚡</div>
+                            <div class="metric-data">
+                                <span class="metric-value">8-12ms</span>
+                                <span class="metric-label">Latencia</span>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">🌐</div>
+                            <div class="metric-data">
+                                <span class="metric-value">1Gb/s</span>
+                                <span class="metric-label">Uplink</span>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">🛡️</div>
+                            <div class="metric-data">
+                                <span class="metric-value">10Tb/s</span>
+                                <span class="metric-label">Anti-DDoS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-performance">
+                        <h4>📊 Rendimiento en Tiempo Real</h4>
+                        <div class="performance-bars">
+                            <div class="perf-bar">
+                                <div class="perf-label">
+                                    <span>CPU</span>
+                                    <span class="perf-value">67%</span>
+                                </div>
+                                <div class="perf-track">
+                                    <div class="perf-fill" style="width: 67%"></div>
+                                </div>
+                            </div>
+                            <div class="perf-bar">
+                                <div class="perf-label">
+                                    <span>RAM</span>
+                                    <span class="perf-value">54%</span>
+                                </div>
+                                <div class="perf-track">
+                                    <div class="perf-fill" style="width: 54%"></div>
+                                </div>
+                            </div>
+                            <div class="perf-bar">
+                                <div class="perf-label">
+                                    <span>Network</span>
+                                    <span class="perf-value">82%</span>
+                                </div>
+                                <div class="perf-track">
+                                    <div class="perf-fill" style="width: 82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-specs">
+                        <h4>⚙️ Especificaciones</h4>
+                        <ul>
+                            <li><span class="spec-icon">🔥</span> AMD Ryzen 9 7950X</li>
+                            <li><span class="spec-icon">💾</span> 128GB DDR5 RAM</li>
+                            <li><span class="spec-icon">💿</span> NVMe Gen4 SSD</li>
+                            <li><span class="spec-icon">❄️</span> Refrigeración líquida</li>
+                            <li><span class="spec-icon">🔐</span> Redundancia N+1</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="action-button primary">
+                            <span>Test de Velocidad</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                                <path d="M7 13L13 7M13 7H7M13 7V13" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="action-button secondary">
+                            <span>Ver Planes</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Canada -->
+                <div class="location-detail-card" data-location="canada">
+                    <div class="card-glow-effect"></div>
+                    <div class="card-header">
+                        <div class="header-left">
+                            <div class="flag-wrapper">
+                                <span class="flag-emoji">🇨🇦</span>
+                            </div>
+                            <div class="location-title">
+                                <h3>Canadá</h3>
+                                <p>Quebec</p>
+                            </div>
+                        </div>
+                        <div class="status-badge online">
+                            <span class="pulse-dot"></span>
+                            Online
+                        </div>
+                    </div>
+
+                    <div class="card-metrics">
+                        <div class="metric">
+                            <div class="metric-icon">⚡</div>
+                            <div class="metric-data">
+                                <span class="metric-value">10-14ms</span>
+                                <span class="metric-label">Latencia</span>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">🌐</div>
+                            <div class="metric-data">
+                                <span class="metric-value">1Gb/s</span>
+                                <span class="metric-label">Uplink</span>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">🛡️</div>
+                            <div class="metric-data">
+                                <span class="metric-value">10Tb/s</span>
+                                <span class="metric-label">Anti-DDoS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-performance">
+                        <h4>📊 Rendimiento en Tiempo Real</h4>
+                        <div class="performance-bars">
+                            <div class="perf-bar">
+                                <div class="perf-label">
+                                    <span>CPU</span>
+                                    <span class="perf-value">52%</span>
+                                </div>
+                                <div class="perf-track">
+                                    <div class="perf-fill" style="width: 52%"></div>
+                                </div>
+                            </div>
+                            <div class="perf-bar">
+                                <div class="perf-label">
+                                    <span>RAM</span>
+                                    <span class="perf-value">48%</span>
+                                </div>
+                                <div class="perf-track">
+                                    <div class="perf-fill" style="width: 48%"></div>
+                                </div>
+                            </div>
+                            <div class="perf-bar">
+                                <div class="perf-label">
+                                    <span>Network</span>
+                                    <span class="perf-value">71%</span>
+                                </div>
+                                <div class="perf-track">
+                                    <div class="perf-fill" style="width: 71%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-specs">
+                        <h4>⚙️ Especificaciones</h4>
+                        <ul>
+                            <li><span class="spec-icon">🔥</span> AMD Ryzen 9 7950X</li>
+                            <li><span class="spec-icon">💾</span> 128GB DDR5 RAM</li>
+                            <li><span class="spec-icon">💿</span> NVMe Gen4 SSD</li>
+                            <li><span class="spec-icon">❄️</span> Enfriamiento natural</li>
+                            <li><span class="spec-icon">🔐</span> Redundancia N+1</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="action-button primary">
+                            <span>Test de Velocidad</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                                <path d="M7 13L13 7M13 7H7M13 7V13" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="action-button secondary">
+                            <span>Ver Planes</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brasil -->
+                <div class="location-detail-card upcoming-card" data-location="brasil">
+                    <div class="card-glow-effect"></div>
+                    <div class="card-header">
+                        <div class="header-left">
+                            <div class="flag-wrapper">
+                                <span class="flag-emoji">🇧🇷</span>
+                            </div>
+                            <div class="location-title">
+                                <h3>Brasil</h3>
+                                <p>São Paulo</p>
+                            </div>
+                        </div>
+                        <div class="status-badge coming-soon">
+                            <span class="pulse-dot"></span>
+                            Q2 2025
+                        </div>
+                    </div>
+
+                    <div class="card-metrics">
+                        <div class="metric">
+                            <div class="metric-icon">⚡</div>
+                            <div class="metric-data">
+                                <span class="metric-value">~8ms</span>
+                                <span class="metric-label">Latencia Est.</span>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">🌐</div>
+                            <div class="metric-data">
+                                <span class="metric-value">1Gb/s</span>
+                                <span class="metric-label">Uplink</span>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-icon">🛡️</div>
+                            <div class="metric-data">
+                                <span class="metric-value">10Tb/s</span>
+                                <span class="metric-label">Anti-DDoS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-roadmap">
+                        <h4>🗓️ Roadmap de Lanzamiento</h4>
+                        <div class="roadmap-timeline">
+                            <div class="roadmap-item completed">
+                                <div class="roadmap-marker"></div>
+                                <div class="roadmap-content">
+                                    <span class="roadmap-title">Infraestructura</span>
+                                    <span class="roadmap-date">Q4 2024</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-item completed">
+                                <div class="roadmap-marker"></div>
+                                <div class="roadmap-content">
+                                    <span class="roadmap-title">Testing Interno</span>
+                                    <span class="roadmap-date">Q1 2025</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-item active">
+                                <div class="roadmap-marker"></div>
+                                <div class="roadmap-content">
+                                    <span class="roadmap-title">Beta Cerrada</span>
+                                    <span class="roadmap-date">En progreso</span>
+                                </div>
+                            </div>
+                            <div class="roadmap-item">
+                                <div class="roadmap-marker"></div>
+                                <div class="roadmap-content">
+                                    <span class="roadmap-title">Lanzamiento</span>
+                                    <span class="roadmap-date">Q2 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-specs">
+                        <h4>⚙️ Especificaciones Planificadas</h4>
+                        <ul>
+                            <li><span class="spec-icon">🔥</span> AMD Ryzen 9 9950X</li>
+                            <li><span class="spec-icon">💾</span> 192GB DDR5 RAM</li>
+                            <li><span class="spec-icon">💿</span> NVMe Gen4 x2</li>
+                            <li><span class="spec-icon">❄️</span> Refrigeración líquida</li>
+                            <li><span class="spec-icon">⚙️</span> Tier IV Datacenter</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="action-button notify">
+                            <span>Notificarme al Lanzar</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                                <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Stats Section -->
+    <section class="network-stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Red en Números</h2>
+                <p>Estadísticas en tiempo real de nuestra infraestructura global</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon-large">🌍</div>
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-text">Continentes</div>
+                    <div class="stat-subtext">Cobertura global estratégica</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-large">⚡</div>
+                    <div class="stat-number">&lt;15ms</div>
+                    <div class="stat-text">Latencia Promedio</div>
+                    <div class="stat-subtext">Conexión ultra rápida</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-large">🛡️</div>
+                    <div class="stat-number">10Tb/s</div>
+                    <div class="stat-text">Protección DDoS</div>
+                    <div class="stat-subtext">Máxima seguridad</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-large">📈</div>
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-text">Uptime SLA</div>
+                    <div class="stat-subtext">Garantía de disponibilidad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/ui/logo.png" alt="Neovex Hosting">
+                    </div>
+                    <p>Hosting premium para gaming. Servidores optimizados con la mejor infraestructura de LATAM.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Discord">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Juegos</h4>
+                    <ul>
+                        <li><a href="minecraft.html">Minecraft</a></li>
+                        <li><a href="hytale.html">Hytale</a></li>
+                        <li><a href="#ark">ARK</a></li>
+                        <li><a href="#rust">Rust</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#ping">Test de Ping</a></li>
+                        <li><a href="#status">Estado</a></li>
+                        <li><a href="#docs">Documentación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#terminos">Términos</a></li>
+                        <li><a href="#privacidad">Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neovex Hosting. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/plansData.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/ubicaciones.js"></script>
+</body>
+</html>

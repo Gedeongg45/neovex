@@ -1,0 +1,155 @@
+/* ================================================
+   MINECRAFT PAGE IMPROVEMENTS
+   Mejoras de centrado y espaciado
+   ================================================ */
+
+/* Imagen de Minecraft en Hero */
+.minecraft-image-hero {
+    text-align: center;
+    margin-top: 60px;
+    padding: 0 2rem;
+}
+
+.img-minecraft {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.img-minecraft:hover {
+    transform: scale(1.02);
+}
+
+/* Container mejorado */
+.hero .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Hero content centrado */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Plans section centrado */
+.plans-section {
+    padding: 80px 0;
+}
+
+.plans-section .container {
+    max-width: 1200px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.plans-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Features section centrado */
+.features-section {
+    padding: 80px 0;
+}
+
+.features-section .container {
+    max-width: 1200px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.features-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Section headers centrados */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+/* CTA section centrado */
+.cta-section {
+    padding: 80px 0;
+}
+
+.cta-section .container {
+    max-width: 900px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .img-minecraft {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+    
+    .minecraft-image-hero {
+        margin-top: 40px;
+        padding: 0 1rem;
+    }
+    
+    .hero .container,
+    .plans-section .container,
+    .features-section .container,
+    .cta-section .container {
+        padding: 0 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-minecraft {
+        border-radius: 8px;
+    }
+    
+    .minecraft-image-hero {
+        margin-top: 30px;
+    }
+    
+    .hero .container,
+    .plans-section .container,
+    .features-section .container,
+    .cta-section .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Espaciado vertical mejorado */
+.hero {
+    min-height: 70vh;
+    padding: 140px 0 80px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        padding: 120px 0 60px;
+    }
+}
